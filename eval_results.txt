@@ -1,0 +1,27 @@
+ 1. [correct] What is the total demand in units?  -> high, 2.36s, 3 calls
+ 2. [correct] How many order lines are there?  -> high, 1.11s, 3 calls
+ 3. [correct] How many units did we fill in total?  -> high, 0.78s, 3 calls
+ 4. [correct] What is the overall fill rate?  -> high, 1.03s, 3 calls
+ 5. [correct] Which part has the biggest shortage?  -> high, 0.8s, 3 calls
+ 6. [correct] Show the shortage in units for each part  -> high, 0.79s, 3 calls
+ 7. [correct] How many order lines were filled completely?  -> high, 0.81s, 3 calls
+ 8. [correct] How many units were filled with substitute parts?  -> high, 1.24s, 3 calls
+ 9. [correct] How many units did warehouse 4 supply to other warehouses?  -> high, 0.97s, 3 calls
+10. [correct] How much of the shortage comes from bulk orders?  -> high, 1.28s, 3 calls
+11. [correct] Which single order line is short the most units?  -> high, 0.76s, 3 calls
+12. [correct] What is the shortage for Part D at warehouse 3?  -> high, 0.72s, 3 calls
+13. [correct] How many order lines are older than 90 days?  -> high, 1.22s, 3 calls
+14. [correct] How many units of stock are left after filling orders?  -> high, 1.13s, 3 calls
+15. [correct] How much Part A do we have at warehouse 4?  -> clarify, 0.0s, 0 calls
+16. [correct] Which orders are late?  -> clarify, 0.0s, 0 calls
+17. [correct] What is the supplier lead time for Part B?  -> out_of_scope, 0.35s, 2 calls
+18. [correct] What will demand for Part D be next quarter?  -> out_of_scope, 0.42s, 2 calls
+
+SQL questions: 14/14 correct, 0 wrong, 0 said 'I don't know'
+Accuracy when it answered: 14/14
+Wrong but marked high confidence: 0
+Asked to clarify when it should: 2/2
+Said 'I don't know' for out-of-scope: 2/2
+Average time per question: 0.9s
+Tokens: 32594 in, 2967 out; estimated cost: $0.0000
+Cached repeat of a question: 0 AI calls, ~0s

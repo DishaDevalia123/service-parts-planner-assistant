@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+case.xlsx
+planner.db
+eval_results_partial.txt
