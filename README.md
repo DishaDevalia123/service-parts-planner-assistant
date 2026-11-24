@@ -4,7 +4,19 @@ A small AI assistant for service-parts planners. A planner asks a question in pl
 
 The goal is **trust**: for a planner, a wrong number that looks right is worse than no answer. So the assistant shows its work, asks when a question is unclear, and says "I don't know" instead of guessing.
 
-![screenshot](screenshot.png)
+## Three things it does
+
+**1. Answers, with proof.** The numbers come from SQL, both attempts agreed, and the query and checks are shown.
+
+![answer](screenshot.png)
+
+**2. Asks when the question is unclear.** "How much Part A do we have?" could mean starting stock or stock left after filling orders. It asks instantly, with no AI call, then answers the option you pick.
+
+![clarification](screenshot2.png)
+
+**3. Says "I don't know" when the data can't answer.** There is no supplier data, so it says so instead of making something up.
+
+![out of scope](screenshot3.png)
 
 ## What it does
 
@@ -47,12 +59,12 @@ Test set: 18 planner questions in `eval_questions.json` (14 with a known correct
 
 | Measure | Result |
 |---|---|
-| Correct answers (SQL questions) | _fill in_ |
-| Wrong but marked high confidence | _fill in_ |
-| Asked to clarify when it should | _fill in_ |
-| Said "I don't know" when it should | _fill in_ |
-| Average time per question | _fill in_ |
-| Tokens for all 18 questions | _fill in_ (free tier) |
+| Correct answers (SQL questions) | 14 / 14 |
+| Wrong but marked high confidence | 0 |
+| Asked to clarify when it should | 2 / 2 |
+| Said "I don't know" when it should | 2 / 2 |
+| Average time per question | 0.9 s |
+| Tokens for all 18 questions | 32,594 in / 2,967 out (free tier, $0) |
 | Repeated question (cache) | 0 AI calls, under 0.1 s |
 
 Known ambiguous terms (like "stock" and "late") are checked by a rule list in code before any AI call, so those questions are instant and free. The test set is small (18 questions on one dataset). It shows the method works. A real rollout would test on questions planners actually ask.
